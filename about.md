@@ -1,15 +1,14 @@
 ---
 layout: page
-title: About
+title: About Me!
 permalink: /about/
 ---
 
-Some information about you!
+뭐 먹고 살지 아직도 고민중인 짝퉁 개발자.
 
-### More Information
+뭐든 배우는 것을 좋아합니다.
 
-A place to include any other types of information that you'd like to include about yourself.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[me@ngenius.kr](mailto:me@ngenius.kr)
