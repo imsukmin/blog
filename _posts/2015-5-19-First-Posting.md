@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Jekyll 설치후기
-categorys : Doodle
+categories :
 tags : [jekyll, 지킬, 블로그, blog]
 permalink: 
 published : true
