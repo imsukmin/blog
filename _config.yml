@@ -55,7 +55,7 @@ baseurl: ""
 
 markdown: redcarpet
 highlighter: pygments
-permalink: /:category/:year/:month/:day/:title
+permalink: /:categories/:year/:i_month/:i_day/: # 'i_' is not add '0' in format value
 
 # The release of Jekyll Now that you're using
 version: v1.1.0
