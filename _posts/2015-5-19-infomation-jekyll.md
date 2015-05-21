@@ -4,6 +4,7 @@ title: Jekyll 탐방하기
 tag : [jekyll, blog]
 categories : [blog]
 published : false
+comments: true
 ---
 
 본 페이지는 Jekyll을 통해서 운영이 되고 있습니다. 그래서 Jekyll을 알아야 좋은 블로그를 만들 수 있다는 생각으로 Jekyll을 정리해 봅시다.
