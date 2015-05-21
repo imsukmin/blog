@@ -3,6 +3,7 @@ layout: post
 title: Jekyll을 라즈베리파이에 설치해 보자
 tag : [jekyll, rasberryPI]
 category : [blog]
+published : true
 ---
 
 이리도 쉬운것을 잘 찾아보지도 않고 안되는 것만 생각한 제가 바보같네요;;
