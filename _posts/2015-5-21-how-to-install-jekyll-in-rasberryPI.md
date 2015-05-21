@@ -14,9 +14,9 @@ P.S 역시 stack overflow는 짱입니다. [링크](http://stackoverflow.com/que
 
 총 3단계를 거칩니다.
 
-    1. sudo apt-get install ruby1.9.1
-    2. sudo apt-get install ruby1.9.1-dev
-    3. sudo gem install jekyll
+    sudo apt-get install ruby1.9.1
+    sudo apt-get install ruby1.9.1-dev
+    sudo gem install jekyll
 
 참 쉽죠? 단.. 라즈베리파이 문제인지 ruby가 무거운 것인지 모르겠지만..
 
