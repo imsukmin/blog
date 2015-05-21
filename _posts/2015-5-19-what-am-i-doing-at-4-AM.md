@@ -2,7 +2,7 @@
 layout: post
 title: 새벽 4시에 나는 무엇을 하고 있는 것일까요.
 tag : [jekyll, blog]
-category : [blog]
+categories : [blog]
 published : true
 ---
 

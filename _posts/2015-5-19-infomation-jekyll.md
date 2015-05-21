@@ -2,7 +2,7 @@
 layout: post
 title: Jekyll 탐방하기
 tag : [jekyll, blog]
-category : [blog]
+categories : [blog]
 published : false
 ---
 

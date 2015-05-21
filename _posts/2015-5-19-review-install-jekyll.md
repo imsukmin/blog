@@ -2,7 +2,7 @@
 layout: post
 title: Jekyll 설치후기
 tag : [jekyll, blog]
-category : [blog]
+categories : [blog]
 published : true
 ---
 
