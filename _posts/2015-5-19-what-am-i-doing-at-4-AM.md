@@ -2,7 +2,7 @@
 layout: post
 title: 새벽 4시에 나는 무엇을 하고 있는 것일까요.
 tag : [jekyll, blog]
-category : blog
+category : [blog]
 ---
 
 뻘짓에 뻘짓을 더해서 현재 Jekyll 습득 중 입니다.
