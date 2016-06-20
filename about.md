@@ -1,14 +1,15 @@
 ---
 layout: page
-title: About Me!
+title: About
 permalink: /about/
 ---
 
-뭐 먹고 살지 아직도 고민중인 짝퉁 개발자.
+This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
 
-뭐든 배우는 것을 좋아합니다.
+You can find the source code for the Jekyll new theme at:
+{% include icon-github.html username="jglovier" %} /
+[jekyll-new](https://github.com/jglovier/jekyll-new)
 
-
-### Contact me
-
-[me@ngenius.kr](mailto:me@ngenius.kr)
+You can find the source code for Jekyll at
+{% include icon-github.html username="jekyll" %} /
+[jekyll](https://github.com/jekyll/jekyll)
