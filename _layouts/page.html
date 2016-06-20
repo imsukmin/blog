@@ -1,12 +1,14 @@
 ---
 layout: default
 ---
+<article class="post">
 
-<article class="page" style="background:#222;">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
 
-  <h1 style="background:#555;">{{ page.title }}</h1>
-
-  <div class="entry">
+  <div class="post-content">
     {{ content }}
   </div>
+
 </article>

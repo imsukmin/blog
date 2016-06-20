@@ -1,14 +1,15 @@
 ---
 layout: page
-title: About Me!
+title: About
 permalink: /about/
 ---
 
-뭐 먹고 살지 아직도 고민중인 짝퉁 개발자.
+#nGenius
 
-뭐든 배우는 것을 좋아합니다.
-
-
-### Contact me
-
-[me@ngenius.kr](mailto:me@ngenius.kr)
+* You can Hire me now!
+* I am using
+  - javascript (also using jQuery)
+  - python
+  - chrome extension
+  - node.js
+* I am living in Seoul, South Korea
