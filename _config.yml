@@ -10,9 +10,12 @@ title: nGenius's Blog
 email: me@nGenius.kr
 description: > # this means to ignore newlines until "baseurl:"
   
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://nGeniuskr.github.io" # the base hostname & protocol for your site
 github_username:  imsukmin
 
 # Build settings
 markdown: kramdown
+
+# output style
+permalink: date
