@@ -8,7 +8,7 @@ react.js를 공부해보려 사전정보 입수를 위해 구글을 이용해 �
 
 ***
 
-###[React.js][reactjs]
+### [React.js][reactjs]
 
 facebook에서 주도하고 있는 오픈소스 프로젝트로, facebook과 instagram에 사용되고 있습니다.
 
@@ -16,14 +16,14 @@ react의 가장 큰 특징은 MVC 페턴에서 V(View) 즉, 화면을 표현하�
 
 MVC 패턴 중 View의 역활만 하기 때문에 Model과 Controller의 역활을 하는 부분을 따로 구현할 수 있습니다.
 
-#####참고문헌 
+##### 참고문헌 
 
 * [react.js 시작하기](http://webframeworks.kr/tutorials/react/getting-started/)
 * [블로터:페이스북의 인기 오픈소스 기술, ‘리액트’란?](http://www.bloter.net/archives/233564) 
 
 ***
 
-###[browserify][browserify]와 [webpack][webpack]
+### [browserify][browserify]와 [webpack][webpack]
 
 React.js는 만들어 진지 얼마 안된 라이브러리입니다. 그래서 최신기술을 많이 적용 되어있는데 
 
@@ -40,7 +40,7 @@ Module은 어떤 하나의 특화된 기능을 하주 잘 수행하는 어떤 �
 검색을 어느정도 해본결과 react.js는 주로 webpack을 사용하는 경우가 많았으니 참고하시기 바랍니다.
 
 
-#####참고문헌
+##### 참고문헌
 
  * [browserify와 webpack](http://blog.coderifleman.com/post/112564054684/browserify와-webpack)
  * [Modules, 앞으로 JavaScript 라이브러리가 나아갈 길](http://appletree.or.kr/blog/web-development/javascript/modules-앞으로-javascript-라이브러리가-나아갈-길/)
@@ -48,7 +48,7 @@ Module은 어떤 하나의 특화된 기능을 하주 잘 수행하는 어떤 �
 
 ***
 
-###[ES2015(ES6)][ES6]
+### [ES2015(ES6)][ES6]
 
 JavaScript는 ECMAScript(ECMA262)라는 사양을 기반으로 구현되어있습니다. 
 
@@ -60,14 +60,14 @@ ES2015라고 불리우는 이유는 2015년에 만들어졌기 때문입니다.
 
 ES6의 경우 ES5를 사용하면서 불편했던 부분이 많이 해소 되었으며, 최근 모던한 브라우저들에서 지원을 하고 있습니다.
 
-#####참고문헌
+##### 참고문헌
 
  * [ES6시대의 JavaScript](https://gist.github.com/marocchino/841e2ff62f59f420f9d9)
  * [ECMAScript 6 Features](http://seokjun.kr/ecmascript-6-features/)
 
 ***
 
-###[Babal][babal]
+### [Babal][babal]
 
 Node.js는 어느 정도 ES2015의 지원하고 있지만 웹 브라우저 같은 경우는 ES2015를 모두 지원하는 것은 
 
@@ -77,7 +77,7 @@ JavaScript에서는 CoffeeScript처럼 비슷한 부류의 언어를 JavaScript�
 
 부르고 있고 ES2015의 트랜스파일러(transpiler)로는 구글이 만든 Traceur와 [Babel][babal]이 있다.
 
-#####참고문헌
+##### 참고문헌
 
  * [Babel로 ECMAScript 2015 사용하기](https://blog.outsider.ne.kr/1176)
  * [ECMAScript 6를 위한 Babel 기본 사용법](http://haruair.com/blog/2917)
@@ -85,7 +85,7 @@ JavaScript에서는 CoffeeScript처럼 비슷한 부류의 언어를 JavaScript�
 
 ***
 
-###[Meteor.js][Meteorjs]
+### [Meteor.js][Meteorjs]
 
 Meteor는 모던 웹과 모던 어플리케이션을 위한 Full-stack 자바스크립트 플랫폼이라고 정의 되어있습니다.
 
@@ -95,14 +95,14 @@ Meteor는 javascript 단 하나의 언어를 이용하여 모든 환경(어플�
 
 
 
-#####참고문헌
+##### 참고문헌
 
  * [Meteor.js 시작하기](http://webframeworks.kr/getstarted/meteorjs/)
  * [Meteor 배우는 방법](http://mobicon.tistory.com/466)
 
 ***
 
-###[flux][flux]
+### [flux][flux]
 
 Flux는 Facebook에서 클라이언트-사이드 웹 어플리케이션을 만들기 위해 사용하는 어플리케이션 아키텍쳐입니다. 
 
@@ -121,7 +121,7 @@ Flux는 MVC와 다르게 단방향으로 데이터가 흐릅니다. React view�
 즉, view가 어떤 방식으로 갱신해야 되는지 일일이 작성하지 않고서도 데이터를 변경할 수 있는 형태에서 편리합니다.
 
 
-#####참고문헌
+##### 참고문헌
 
  * [flux Overview](http://haruair.github.io/flux/docs/overview.html)
 
