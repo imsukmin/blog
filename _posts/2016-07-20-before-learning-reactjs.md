@@ -2,7 +2,6 @@
 layout: post
 title:  "React.js를 하기 전에 알아야 할 정보들"
 date:   2016-07-02 
-categories: react reactjs meteor webpack commonjs
 ---
 
 react.js를 공부해보려 사전정보 입수를 위해 구글을 이용해 정보를 찾아서 정리해봅니다.

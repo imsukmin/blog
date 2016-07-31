@@ -16,6 +16,3 @@ github_username:  imsukmin
 
 # Build settings
 markdown: kramdown
-
-# output style
-permalink: date
