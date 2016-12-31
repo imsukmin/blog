@@ -4,9 +4,8 @@ title: About
 permalink: /about/
 ---
 
-#nGenius
+# nGenius
 
-* You can Hire me now!
 * I am using
   - javascript (also using jQuery)
   - python
