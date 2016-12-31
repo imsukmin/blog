@@ -6,13 +6,48 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: nGenius's Blog
+title: nGenius Blog
 email: me@nGenius.kr
-description: > # this means to ignore newlines until "baseurl:"
-  
-baseurl: "" # the subpath of your site, e.g. /blog
+description: "All content copyright <b>nGenius Blog</b> © 2017 • All rights reserved."
+
 url: "http://nGeniuskr.github.io" # the base hostname & protocol for your site
 github_username:  imsukmin
 
-# Build settings
-markdown: kramdown
+# 읽기 처리방법
+safe:         false
+include:      [".htaccess"]
+exclude:      []
+keep_files:   [".git", ".svn"]
+encoding:     "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# 컨텐츠 필터링
+show_drafts: null
+limit_posts: 0
+future:      false
+unpublished: false
+
+# 플러그인
+whitelist: []
+gems:      []
+
+# 변환
+markdown:    kramdown
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+incremental: false
+
+# 서버 작동
+detach:  false
+port:    8001
+host:    127.0.0.1
+baseurl: "" # the subpath of your site, e.g. /blog
+
+# 출력 방식
+permalink:     date
+paginate_path: /page:num
+timezone:      null
+
+quiet:    false
+defaults: []

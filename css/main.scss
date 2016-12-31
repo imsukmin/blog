@@ -28,6 +28,11 @@ $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+// for font-awesome
+$fa-font-path:        "../fonts/font-awesome";
+
+// for bootstrap
+$icon-font-path:      "../fonts/bootstrap";
 
 
 // Use media queries like this:
@@ -43,11 +48,19 @@ $on-laptop:        800px;
     }
 }
 
+@mixin media-query-min($device) {
+    @media screen and (min-width: $device) {
+        @content;
+    }
+}
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "font-awesome/font-awesome",
+        "bootstrap-sass/bootstrap",
         "base",
+        // "grid",
         "layout",
         "syntax-highlighting"
 ;
