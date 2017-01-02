@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "bootstrap 적용"
+title: "홈페이지 리뉴얼?"
 date: "2016-12-31 13:00:14 +0900"
 ---
 
