@@ -172,6 +172,11 @@ header {
 .post-content {
     margin-bottom: $spacing-unit;
 
+    h1,h2 {
+        border-bottom: 1px solid #EEEEEE;
+        padding: 30px 0;
+    }
+
     h2 {
         font-size: 32px;
 
@@ -194,5 +199,7 @@ header {
         @include media-query($on-laptop) {
             font-size: 18px;
         }
+
+        padding: 20px 0;        
     }
 }
