@@ -23,13 +23,13 @@ Telegram bot의 경우에는 공식적으로 api를 지원하고 있고 많은 �
 
 따라서 process의 흐름은 다음과 같습니다.
 
-![process1.png](../images/2017-01-13-review-make-telegram-bot/process1.png)
+![process1.png](/images/2017-01-13-review-make-telegram-bot/process1.png)
 
 ## 문제점 발생 - 이놈에 OCR은 왜 항상 미완성 인가.
 
 역시 생각대로 한번에 되는 프로젝트는 없나봅니다 (..) 넓은 그림에 드문드문 있는 글씨로는 tesseract의 인식률은 절망에 가까웠습니다. 제가 인식 시키려고 했던 이미지입니다.
 
-![인식을 해야하는 그림](../images/2017-01-13-review-make-telegram-bot/recent.png)
+![인식을 해야하는 그림](/images/2017-01-13-review-make-telegram-bot/recent.png)
 
 그래서 이미지에서 텍스트 영역을 잡아서 인식시키기로 했습니다. 그림을 영역을 잡기 위해 영역을 나누고 잘라 각각의 파일로 나눈 뒤 각각의 그림을 OCR을 돌리기로 했습니다. 그래서 새로운 툴인 grahicmagick라는 툴을 영입하여 사용하기로 했습니다.
 
@@ -37,7 +37,7 @@ Telegram bot의 경우에는 공식적으로 api를 지원하고 있고 많은 �
 * telegram bot api
 * grahicmagick (그림 도구 툴)
 
-![process2.png](../images/2017-01-13-review-make-telegram-bot/process2.png)
+![process2.png](/images/2017-01-13-review-make-telegram-bot/process2.png)
 
 여러번의 시행착오( 처음에 영역은 2개였으나 차츰 늘어 5개가 됨, 방 이름이 영어라서 인식이 안되어 언어팩을 바꿔가며 사용 등등) 끝에 원하는 텍스트를 추출할 수 있게 되었습니다.(만세!)
 
@@ -49,7 +49,7 @@ Telegram bot의 경우에는 공식적으로 api를 지원하고 있고 많은 �
 
 우여곡절 끝에 `bot.on()`과 `bot.onText()`의 차이(on()는 모든 메시지의 반응하는 이벤트리스너이고 onText()는 bot api의 기능중 하나인 command를 사용하기 위해 만들어진 것이였다.)를 알아내었고 "안녕"이라는 키워드에 반응 하도록 하는데 또 1시간이 들었다. 그럼 이제 추출된 값을 보내줄수 있게 되었다!
 
-![process3.png](../images/2017-01-13-review-make-telegram-bot/process3.png)
+![process3.png](/images/2017-01-13-review-make-telegram-bot/process3.png)
 
 
 ## 마지막인가...?
@@ -66,7 +66,7 @@ Telegram bot의 경우에는 공식적으로 api를 지원하고 있고 많은 �
 
 위와 같은 코드를 통해 메시지를 분류하여 처리하였다. 일단 계획한 대로 잘 처리되는 프로그램이 완성되었다.
 
-![process4.png](../images/2017-01-13-review-make-telegram-bot/process4.png)
+![process4.png](/images/2017-01-13-review-make-telegram-bot/process4.png)
 
 ## 뭔가 허전한데..
 
@@ -76,19 +76,19 @@ Telegram bot의 경우에는 공식적으로 api를 지원하고 있고 많은 �
 
 추가 과제가 출몰하였습니다. 구글 켈린더 링크와 애플 켈린더 링크를 보내주는 것 까지를 목표로 하게 되었습니다.
 
-![process5.png](../images/2017-01-13-review-make-telegram-bot/process5.png)
+![process5.png](/images/2017-01-13-review-make-telegram-bot/process5.png)
 
 ## 애플 캘린더는 복잡하구나..
 
 링크를 어떻게 만들면 좋을까 라는 고민에 문득 떠오른 사이트가 있었으니 그것은 [onoffmix](http://www.onoffmix.com)였습니다. 2~3년전 자주 사용했지만 이제는 이용이 뜸해진 그 곳에서는 이벤트 등록 편의를 위해 구글 켈린더 링크와 ics 파일을 다운로드 받을 수 있도록 되어있습니다. 순간 스치는 의문점.. "왜 애플 캘린더는 이벤트 추가 링크가 없지?"라는 생각과 검색 끝에 확실한 정보는 찾을 수 없었지만, 브라우져로 서비스되지 않기 때문이라는 추론만 남긴체 결국 ics파일을 만드는 방향으로 프로세스를 수정합니다.
 
-![process6.png](../images/2017-01-13-review-make-telegram-bot/process6.png)
+![process6.png](/images/2017-01-13-review-make-telegram-bot/process6.png)
 
 ## ics는 표준 규격이 존재한다.
 
 일단 모험심이 강한 필자는 ics파일을 까서 어떤 형식을 취하는 지를 확인하고 내가 (쉽게!) 만들수 있는지를 조사하기로 했습니다. 
 
-![in_icsFile.png](../images/2017-01-13-review-make-telegram-bot/in_icsFile.png)
+![in_icsFile.png](/images/2017-01-13-review-make-telegram-bot/in_icsFile.png)
 
 위 그림처럼 얼마안되는 양의 양식이였기 때문에 별로 어렵지 않다고 생각한 필자는 field부분을 어떻게 채워 나가야 하는지 파악하며 나아가는 중 UID부분에서 정보를 찾지 못하였고 결국 npm의 ics 모듈과 노드의 기본모듈인 fs모듈을 사용하여 ics를 만들고 보내는 방식으로 프로그램을 제작하였습니다.
 
@@ -98,18 +98,18 @@ Telegram bot의 경우에는 공식적으로 api를 지원하고 있고 많은 �
 
     eventLinkToGoogle = "http://www.google.com/calendar/render?action=TEMPLATE&text=[이벤트제목]&dates="+(new Date(시작시간 [YYYY-MM-DD HH:MM])).toISOString().replace(/-|:|\.\d\d\d/g,"")+"/"+(new Date(종료시간 [YYYY-MM-DD HH:MM])).toISOString().replace(/-|:|\.\d\d\d/g,"")+"&sprop=name:주최자&location=장소";
 
-![process7.png](../images/2017-01-13-review-make-telegram-bot/process7.png)
+![process7.png](/images/2017-01-13-review-make-telegram-bot/process7.png)
 
 ## 진짜 마지막인가...?
 
-![result.png](../images/2017-01-13-review-make-telegram-bot/result.png)
+![result.png](/images/2017-01-13-review-make-telegram-bot/result.png)
 
 
 잘 작동 되는 것이 확인 되었습니다. 이제 라즈베리 파이로 옮기기만 하면 됩니다.
 
 ## 끝!
 
-![rasp-pi.png](../images/2017-01-13-review-make-telegram-bot/rasp-pi.png)
+![rasp-pi.png](/images/2017-01-13-review-make-telegram-bot/rasp-pi.png)
 
 
 라즈베리파이에 이식 또한 완료되었습니다!
