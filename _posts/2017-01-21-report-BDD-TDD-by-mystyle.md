@@ -30,6 +30,7 @@ TDD라는 걸출한 방법론이 있음에도 속속들이 나타나는 xDD들�
 [BDD 참조](http://blog.jaigurudevaom.net/319)
 
 [TDD와 BDD의 차이점](http://blog.aliencube.org/ko/2014/04/02/differences-between-bdd-and-tdd/)
+
 ## 그럼 어떻게 BDD를 진행해볼까?
 
 가장 좋은 하지만 조금 위험한 방법인 "예제를 이용한 설명"을 진행해볼까 합니다. 
