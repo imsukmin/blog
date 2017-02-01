@@ -29,8 +29,13 @@ date: "2017-01-30"
 
 
 # Build system
+
 빌드 시스템을 한마디로 정리하면 연관된 작업모음의 자동화(보통 task runner라 한다)이다.[(출처)](http://joellongie.com/gulp-build-system-fundamentals/) 
+
+
 ![Building system](https://i1.wp.com/joellongie.com/wp-content/uploads/2015/02/web-workflow-componets.jpg)
+
+
 웹 개발자를 예로 든다면 프로젝트 파일 중 하나를 수정하면 프로젝트 결과물을 자동으로 배포하는(scss파일을 css파일로 컴파일, js파일들을 minifying하여 하나로 묶는 작업, 작업된 파일을 dist폴더로 이동 등등)작업을 자동화 시킨 것과 같다.  
 
 
@@ -89,9 +94,9 @@ gulp.task('default', function() {
 
 그리고 콘솔창에서 `gulp`를 입력하면 실행한다.
 
-## [API](https://github.com/preco21/gulp-docs-ko/blob/master/API.md)
+## [gulp API](https://github.com/preco21/gulp-docs-ko/blob/master/API.md)
 
-gulp를 사용하기 위해선 몇가지 알아야할 API와 함수가 존재한다.
+gulp를 사용하기 위해선 몇가지 알아야할 API가 존재한다.
 
 ### [gulp.src(globs[, options])](https://github.com/preco21/gulp-docs-ko/blob/master/API.md#gulpsrcglobs-options)
 
@@ -110,7 +115,7 @@ options는 javascript 객체이며 다음의 값을 갖는다.
 
 #### options.buffer
 
-타입: Boolean 기본값: true
+`타입: Boolean 기본값: true`
 
 false로 지정하면 file.contents를 버퍼 파일 대신 스트림 형식으로 반환한다. 아주 큰 파일을 다룰 때 유용하게 사용할 수 있다.
 
@@ -118,13 +123,13 @@ false로 지정하면 file.contents를 버퍼 파일 대신 스트림 형식으�
 
 #### options.read
 
-타입: Boolean 기본값: true
+`타입: Boolean 기본값: true`
 
 false로 지정하면 file.contents가 null이 되며 모든 파일을 읽지 않는다.
 
 #### options.base
 
-타입: String 기본값: 모든 glob가 시작되는 위치 ([glob2base](https://github.com/wearefractal/glob2base)를 참고)
+`타입: String 기본값: 모든 glob가 시작되는 위치` ([glob2base](https://github.com/wearefractal/glob2base)를 참고)
 
 예제: somefile.js가 client/js/somedir안에 있을 때:
 
@@ -154,13 +159,13 @@ options는 javascript 객체이며 다음의 값을 갖는다.
 
 #### options.cwd
 
-타입: String 기본값: process.cwd()
+`타입: String 기본값: process.cwd()`
 
 결과물을 출력할 cwd 폴더를 지정합니다. 출력 폴더가 상대 경로일 경우에만 작동한다.
 
 #### options.mode
 
-타입: String 기본값: 0777
+`타입: String 기본값: 0777`
 
 출력 폴더를 생성하기 위해 필요한 폴더의 모드를 8진수 권한 문자열로 설정한다.
 
@@ -185,7 +190,7 @@ function의 작업을 비동기로 만들 수도 있다.
 
 #### 콜백 사용
 ```
-// run a command in a shell
+// shell에서 구동 시에
 var exec = require('child_process').exec;
 gulp.task('jekyll', function(cb) {
   // build Jekyll
@@ -260,15 +265,15 @@ gulp.watch는 원하는 폴더를 감시하고 해당 폴더의 내용이 변경
 
 #### glob
 
-타입: String 또는 Array
+`타입: String 또는 Array`
 
 변경을 감시할 타겟 파일입니다. 단일 glob 또는 배열을 지정할 수 있다.
 
 #### opts
 
-타입: Object
+`타입: Object`
 
-gaze로 넘겨지는 옵션이다.
+[gaze](https://github.com/shama/gaze)로 넘겨지는 옵션이다. [gaze](https://github.com/shama/gaze)는 node의 fs.watch를 이용한 watch 라이브러리이며 node 4버전 이상부터 사용이 가능하다.
 
 ### [gulp.watch(glob [, opts], tasks)](https://github.com/preco21/gulp-docs-ko/blob/master/API.md#gulpwatchglob-opts-tasks)
 
@@ -281,7 +286,7 @@ watcher.on('change', function(event) {
 
 #### tasks
 
-타입: Array
+`타입: Array`
 
 파일의 변경 이벤트가 발생할 때마다 호출할 task다. 여러 개 지정할 수 있다.
 
@@ -295,21 +300,153 @@ gulp.watch('js/**/*.js', function(event) {
 
 #### cb(event)
 
-타입: Function
+`타입: Function`
 
 콜백은 변경 이벤트마다 호출되며 event 객체를 반환한다.
 
 #### event.type
 
-타입: String
+`타입: String`
 
 발생한 이벤트의 타입입니다. added, changed, deleted 중 한 가지가 지정된다.
 
 #### event.path
 
-타입: String
+`타입: String`
 
 이벤트가 발생한 파일의 경로다.
 
 
+## [gulp Cli](https://github.com/preco21/gulp-docs-ko/blob/master/CLI.md)
 
+```
+gulp \<a task\> [\<another tasks\> \<flags\>] 
+```
+
+gulp는 make처럼 콘솔에서 실행해야 한다.(물론 IDE를 사용하시면 안하셔도 됩니다만.. 저는 콘솔이 편해서).
+
+gulp는 단독 실행이 가능하며 gulp만 입력했다면 `gulp default`를 실행 하는 것과 같다. 그래서 `gulpfile`에 'default' task가 없을 경우 에러를 낸다. 그래서 보통 'default' task에는 integration이나 building process를 입력해놓는다.
+
+gulp는 각각의 task를 선택해서 실행이 가능하다. 또한 여러개의 task를 동시에 실행도 가능하다.
+ 
+gulp 명령어에는 help 커멘드가 없다. 이에 콘솔에서 쓰이는 gulp의 flag들을 확인해보자.
+
+* v or --version 전역, 지역 gulp의 버전을 표시합니다.
+* -require `module path` gulpfile을 실행하기 전에 포함할 모듈을 지정합니다. 이 플래그는 빌드전에 transpile 언어를 컴파일 할 때 사용할 수 있습니다. 또한 다중으로 --require 플래그를 사용할 수 있습니다.
+* -gulpfile `gulpfile path` 실행할 gulpfile을 직접 지정합니다. gulpfile이 여러 개일 때 유용한 플래그입니다. 그뿐만 아니라 gulpfile 디렉터리를 CWD로 설정합니다.
+* -cwd `dir path` CWD를 직접 지정합니다. gulpfile과 포함된 모든 모듈들은 이 디렉터리에서 찾습니다.
+* T or --tasks 로드된 gulpfile의 작업 리스트를 의존성 트리 형태로 표시합니다.
+* -tasks-simple 로드된 gulpfile의 작업 리스트를 간단한 텍스트로 표시합니다.
+* -color gulp와 gulp 플러그인의 색상 로깅을 지원하지 않을 때도 활성화합니다.
+* -no-color gulp와 gulp 플러그인의 색상 로깅을 모두 비활성화합니다.
+* -silent 모든 gulp 로그를 비활성화합니다.
+
+# favorite [gulp plugin](http://gulpjs.com/plugins/)
+
+gulp는 2000개가 넘는(확인 결과 2846개 등록 됨) plugin을 지원하지만 우리는 그 걸 다 사용하진 않을 것이고, 그리고 그 중에서도 많이 사용되는 것을 사용하지 않을 까라는 차원에서의 정리이다.
+[\[참고사이트\]](https://github.com/Pestov/essential-gulp-plugins)
+[\[npm best overall\]](https://www.npmjs.com/search?q=gulp&page=1&ranking=optimal)
+
+### [gulp-uglify](https://www.npmjs.com/package/gulp-uglify/)
+
+gulp-uglify는 javascript file을 압축시킨다.
+
+```
+var gulp = require('gulp');
+var uglify = require('gulp-uglify');
+ 
+gulp.task('compress', function () {
+    gulp.src('lib/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist'));
+});
+```
+
+
+### [gulp-uglifycss](https://www.npmjs.com/package/gulp-uglifycss/)
+
+gulp-uglifycss는 css file을 압축시킨다.
+
+```
+var gulp = require('gulp');
+var uglify = require('gulp-uglify');
+ 
+gulp.task('compress', function () {
+    gulp.src('lib/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist'));
+});
+```
+
+### [gulp-concat](https://www.npmjs.com/package/gulp-concat/)
+
+gulp-concat은 여러개의 javascript file을 하나로 만들어준다.
+
+```
+var concat = require('gulp-concat'); 
+var uglifycss = require('gulp-uglifycss');
+ 
+gulp.task('css', function () {
+  gulp.src('./styles/**/*.css')
+    .pipe(uglifycss({
+      "maxLineLen": 80,
+      "uglyComments": true
+    }))
+    .pipe(gulp.dest('./dist/'));
+});
+```
+
+### [gulp-sass](https://www.npmjs.com/package/gulp-sass/)
+
+gulp-sass은 scss/sass 파일을 css 파일로 변환시켜주는 preprocesser이다.
+```
+'use strict';
+ 
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+ 
+gulp.task('sass', function () {
+  return gulp.src('./sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./css'));
+});
+ 
+gulp.task('sass:watch', function () {
+  gulp.watch('./sass/**/*.scss', ['sass']);
+});
+```
+
+# gulp in IDE(Jetbrains products)
+
+gulp를 IDE에서 편하게 관리해보자. [\[참고 자료\]](http://wagunblog.com/wp/?p=1823)
+
+0. nodejs와 npm은 설치되어있다고 가정한다.
+1. IDE Terminal에서 `npm init` -> `npm install gulp -g` -> `npm install gulp --save-dev`를 순차적으로 입력합니다.
+2. 프로젝트 최상단에 `gulpfile.js`를 생성합니다. 그리고 진행 확인을 위해 gulp.task 하나정도를 명세합니다.
+3. `gulpfile.js`를 오른쪽마우스로 클릭하고 `Show Gulp Tasks`를 선택하면 좌측 하단에 Gulp 창이 나타납니다.
+4. task를 선택해서 실행하면 됩니다.
+
+# gulpfile recipes
+
+gulp github프로젝트의 문서 사항 중 사용목적별로 엄선된(?) 잘 만들어진 gulpfile을 모아놨다. ([링크](https://github.com/gulpjs/gulp/tree/master/docs/recipes))
+
+# gulpfile cheat sheet
+
+어느 훌륭하신 분이 고맙게도 [cheet sheet](https://github.com/osscafe/gulp-cheatsheet)를 작성하여 배포하셨으니 참고하길 바람.
+
+![gulp cheat sheet1](https://github.com/osscafe/gulp-cheatsheet/raw/master/images/en-js-p1.png)
+
+![gulp cheat sheet2](https://github.com/osscafe/gulp-cheatsheet/raw/master/images/en-js-p2.png)
+
+
+# 정리
+사용법이 간단해서 내용도 간단할 줄 알았던 저의 착각이 글 발행기일을 넘겨버리는 지경까지 가게되었습니다 ㅠ. 생각보다 많은 리소스를 오픈소스에서 착안한 부분은 아주 인상적이였습니다. 
+
+시간이 된다면 gulp와 관련하여 이런 주제를 진행 하려 합니다.
+* vinyl filesystem
+* glob & node-glob
+* Orchestrator
+* compare javascript build tool
+
+하하 저의 게으름을 고처줄 명약을 찾습니다...
+끗!
