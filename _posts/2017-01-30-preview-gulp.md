@@ -368,13 +368,15 @@ gulp.task('compress', function () {
 gulp-uglifycss는 css file을 압축시킨다.
 
 ```
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
+var uglifycss = require('gulp-uglifycss');
  
-gulp.task('compress', function () {
-    gulp.src('lib/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('dist'));
+gulp.task('css', function () {
+  gulp.src('./styles/**/*.css')
+    .pipe(uglifycss({
+      "maxLineLen": 80,
+      "uglyComments": true
+    }))
+    .pipe(gulp.dest('./dist/'));
 });
 ```
 
