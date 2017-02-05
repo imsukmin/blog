@@ -109,7 +109,7 @@ gulp.src('client/templates/*.jade')
 
 `globs`는 [node-glob문법](https://github.com/isaacs/node-glob)을 따른다.
 
-gulp는 특이한 파일 시스탬을 사용하는데 이름은 [vinyl](https://github.com/wearefractal/vinyl-fs)이라고 한다.(차후 설명 - [관련링크](http://programmingsummaries.tistory.com/382)) 이 특수한 파일시스탬은 [node의 stream](https://nodejs.org/api/stream.html)을 반환하며, node의 [pipe()](http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options)를 이용하여 작업을 진행한다. 
+gulp는 특이한 파일 시스탬을 사용하는데 이름은 [vinyl](https://github.com/wearefractal/vinyl-fs)이라고 한다.([관련링크](http://programmingsummaries.tistory.com/382)) 이 특수한 파일시스탬은 [node의 stream](https://nodejs.org/api/stream.html)을 반환하며, node의 [pipe()](http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options)를 이용하여 작업을 진행한다.([참고자료: node stream의 이해](http://programmingsummaries.tistory.com/363))
 
 options는 javascript 객체이며 다음의 값을 갖는다.
 
@@ -368,13 +368,15 @@ gulp.task('compress', function () {
 gulp-uglifycss는 css file을 압축시킨다.
 
 ```
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
+var uglifycss = require('gulp-uglifycss');
  
-gulp.task('compress', function () {
-    gulp.src('lib/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('dist'));
+gulp.task('css', function () {
+  gulp.src('./styles/**/*.css')
+    .pipe(uglifycss({
+      "maxLineLen": 80,
+      "uglyComments": true
+    }))
+    .pipe(gulp.dest('./dist/'));
 });
 ```
 
