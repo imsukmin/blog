@@ -47,7 +47,7 @@ OS안에서 각각의 process는 Process Contral Block(PCB)로 표현된다.
 ![CPU-switch](/images/2017-02-05-jump-to-OS/CPU-switch.PNG)
 
 * CPU-Scheduling infomation : cpu가 처리하는 스케쥴링 큐의 포인터나 스케쥴링의 기준이 되는 값을 저장.
-* Memory-management information : OS가 관리하는 Memory ststem의 page table이나 segment table, base register, limit register 값이 들어있다.
+* Memory-management information : OS가 관리하는 Memory system의 page table이나 segment table, base register, limit register 값이 들어있다.
 
 ![base-limit-register](/images/2017-02-05-jump-to-OS/base-limit-register.PNG)
 
@@ -190,7 +190,7 @@ cooperating process는 data와 information을 교환을 허락하는 메카니�
 
 ![sharedmemory-messagepassing](/images/2017-02-05-jump-to-OS/sharedmemory-messagepassing.PNG)
 
-## Shared-Memory Ststems
+## Shared-Memory Systems
 
 일반적으로, Shared-Memory는 주소공간 안의 process가 생성해놓은 Shared-Memory 위치한다.
 
@@ -201,7 +201,7 @@ producer process는 정보를 생산하고 consumer process는 정보를 소비�
 producer-consumer problem의 하나의 해결책은 shared-memory를 사용하는 것이다. producer와 consumer를 동시에 돌리기 위해서는 공용으로 사용하는 buffer가 필요하다.
  2가지 종류의 buffer를 사용한다. unbounded buffer로 크기제한이 없는 buffer 이다. consumer는 새로운 아이탬을 기다리겠지만 producer는 항상 새로운 아이탬을 만들어 낼 수 있다. bounded buffer는 크기의 제한을 두는 buffer이다. 이 경우에는 buffer가 비어있다면 consumer가 기다리게 되고, buffer가 가득차면 producer가 기다리게 된다. 
 
-## Message-Passing Ststems
+## Message-Passing Systems
 
 message-passing은 shared-memory없이도 process들의 동작을 동기화 시킬 수 있고, process간에 통신이 가능하도록 하는 메커니즘을 제공한다. 이 환경은 특히 네트워트 안에 다른 컴퓨터의 process와 통신하는 분산 환경에서 유용하다. 
 message-passing 기능은 최소 2가지의 기능을 지원한다.
