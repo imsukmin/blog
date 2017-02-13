@@ -4,3 +4,4 @@ _site
 .DS_store
 _drafts/2017-01-01-frameSample.md
 raft
+debug.log
