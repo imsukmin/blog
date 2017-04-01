@@ -8,7 +8,7 @@ OS 2탄이 돌아왔습니다! 하하.. 하나의 포스트로 정리하려고 �
 
 스레드는 CPU 사용의 기본 단위다. 스레드 ID, 프로그램 카운터, 레지스터 세트 및 스택을 포함한다.
 
-![thread](/images/2017-02-05-jump-to-OS/thread.PNG)
+![thread](/images/2017-02-05-jump-to-OS/thread.png)
 
 ## Motivation
 
@@ -26,8 +26,8 @@ OS 2탄이 돌아왔습니다! 하하.. 하나의 포스트로 정리하려고 �
 
 코어들(2개이상)이 CPU 칩 전체 또는 CPU 칩 안에서 존재하면 멀티 코어 또는 멀티 프로세서 시스템이라고 한다.
 
-![singlecore](/images/2017-02-05-jump-to-OS/singlecore.PNG)
-![multicore](/images/2017-02-05-jump-to-OS/multicore.PNG)
+![singlecore](/images/2017-02-05-jump-to-OS/singlecore.png)
+![multicore](/images/2017-02-05-jump-to-OS/multicore.png)
 
 
 동시성은 싱글 코어에서 멀티 스레드를 동작시키기 위한 방식으로 멀티 태스킹을 위해 여러 개의 스레드가 번갈아가면서 실행되는 성질을 말한다. 동시성을 이용한 싱글 코어의 멀티 태스킹은 각 스레드들이 병렬적으로 실행되는 것처럼 보이지만 사실은 번갈아가면서 조금씩 실행되고 있는 것이다. 병렬성은 멀티 코어에서 멀티 스레드를 동작시키는 방식으로, 한 개 이상의 스레드를 포함하는 각 코어들이 동시에 실행되는 성질을 말한다. 따라서 병렬 처리없이 동시성을 가질 수 있다.
@@ -46,17 +46,17 @@ OS 2탄이 돌아왔습니다! 하하.. 하나의 포스트로 정리하려고 �
 
 다대일 모델은 여러개의 user thread를 하나의 kernel thread로 관리하는 모델이다. thread library를 사용해서 관리하며 효율적인 방법이다. 그러나 하나의 thread가 block을 호출하면 나머지 thread도 block당하며 하나의 kernel thread를 사용하기 때문에 다중 코어 시스템에서의 병렬처리가 불가능하다.
 
-![many-to-one-model](/images/2017-02-05-jump-to-OS/many-to-one-model.PNG)
+![many-to-one-model](/images/2017-02-05-jump-to-OS/many-to-one-model.png)
 
 ## One-to-One Model
 
 일대일 모델은 하나의 user thread를 하나의 kernel thread로 관리하는 모델이다. 이 모델은 동시성도 우수하고 다중 코어 시스템에서의 병렬처리도 가능하고 block에 독립적이기 때문에 빠르다. 다만 단점은 User thread가 많아짐으로서 kernel thread도 같이 많아지기 과부하가 걸리게 된다.
 
-![one-to-one-model](/images/2017-02-05-jump-to-OS/one-to-one-model.PNG)
+![one-to-one-model](/images/2017-02-05-jump-to-OS/one-to-one-model.png)
 
 ## Many-to-Many Model
 
 다대다 모델은 여러개의 user thread를 user thread의 수보가 적게 kernel thread로 관리하는 모델이다. 개발자는 필요한만큼의 사용자 스레드를 만들 수 있으며 해당 커널 스레드는 다중 프로세서에서 병렬로 실행할 수 있다. 또한 스레드가 블로킹 system call을 수행 할 때 커널은 다른 스레드의 실행을 예약 할 수 있다. 위의 모델들의 장단점이 분명하기 때문에 이 두가지 모델의 장점을 섞어서 만들어진 것이 two-level model이다.
 
-![many-to-many-model](/images/2017-02-05-jump-to-OS/many-to-many-model.PNG)
-![two-level-model](/images/2017-02-05-jump-to-OS/two-level-model.PNG)
+![many-to-many-model](/images/2017-02-05-jump-to-OS/many-to-many-model.png)
+![two-level-model](/images/2017-02-05-jump-to-OS/two-level-model.png)
