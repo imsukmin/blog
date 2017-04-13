@@ -1,4 +1,4 @@
->---
+---
 layout: post
 title: "OS: process sync"
 date: "2017-04-13"
