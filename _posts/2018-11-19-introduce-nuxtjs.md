@@ -221,17 +221,11 @@ Naxt 프레임 워크의 학습 과정에서 애플리케이션 코드 구조에
 
 이것은 Nuxt 애플리케이션에서 모든 것이 어떻게 잘 맞는지 이해하는 데 도움이되는 많은 대체적인 관점 중 하나 입니다.
 
-개인적으로, 이 작은 연습은 저에게 도움이됩니다.
+개인적으로, 이 작은 연습은 저(저자)에게 도움이됩니다.
 
 - Nuxt의 기본적인(out-of-the-box) 기능에 대해 프로젝트 요구 사항을 제시
 - 이미 사용 가능한 관련 커뮤니티 모듈 및 플러그인 나열, 그리고
 - 커스텀 개발이 필요한 남겨진 부분 혹은 복잡한 부분(bits)를 선택하십시오.
-
-For me personally, this little exercise helps me:
-
-- map out the requirements of the project against out-of-the-box Nuxt features
-- list relevant community modules & plugins that are already available, and
-- pick out the remaining/complex bits that require custom development.
 
 #### **위에서 사용 된 다이어그램의 고해상도 버전과 연결됩니다.**
 
