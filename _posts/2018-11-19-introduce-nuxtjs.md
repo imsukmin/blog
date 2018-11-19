@@ -30,14 +30,14 @@ date: "2018-11-19"
 
 ### Vuex 저장소 (/store)
 
-Vuex는 nuxt.js에 이미 포함되어있지만,  _/store_ 디렉토리에 Vuex 저장소를 만들고 저장소를 만들지 않는 한 활성화되지 않습니다.
+Vuex는 nuxt.js에 이미 포함되어있지만, _/store_ 디렉토리에 Vuex 저장소를 만들고 저장소를 만들지 않는 한 활성화되지 않습니다.
 
-이것은 모든 데이터 기반 프로젝트를 위한 매우 특별한 디렉토리입니다. 여기에서 데이터 저장소를 만들고 _nuxtServerInit_작업을 정의 할 수 있습니다. 이것은 거의 첫 번째 라이프 사이클 훅에서 발생합니다!
+이것은 모든 데이터 기반 프로젝트를 위한 매우 특별한 디렉토리입니다. 여기에서 데이터 저장소를 만들고 _nuxtServerInit_ 작업을 정의 할 수 있습니다. 이것은 거의 첫 번째 라이프 사이클 훅에서 발생합니다!
 
 ```javascript
 const createStore = () => {  
   return new Vuex.Store({  
-      ...  
+      ...
   })  
 }
 ```
@@ -63,13 +63,13 @@ export default {
 }
 ```
 
-- Layout middleware (layouts 폴더 안 파일에 추가하고, 일치하는 라우트 그룹에 영향을줍니다, 즉 인증 된 사용자 만 보거나 액세스 할 수 있는 특정 페이지 같은 것을 예로 들수 있습니다.)
+- Layout middleware (layouts 폴더 안 파일에 추가하고, 일치하는 라우트 그룹에 영향을 줍니다, 즉 인증 된 사용자 만 보거나 액세스 할 수 있는 특정 페이지 같은 것을 예로 들수 있습니다.)
 
 ```javascript
 // layouts/default.vue
 
 export default {  
-  middleware: 'authenticated-basic-plan-user'  
+  middleware: 'authenticated-basic-plan-user'
 }
 ```
 
@@ -95,7 +95,7 @@ Nuxt 프로젝트에서 _.vue_ 파일이 생성되는 세 개의 디렉토리가
 
 페이지 컴퍼넌트의 진정한 강점은 동적 경로에 있습니다. 당신은 이것(동적 경로)을 사용하여 SEO 친화적인 데이터 지향적 URL을 생성 할 수 있습니다. 동적 경로는 _/pages._ 아래의 디렉토리 구조를 기반으로 생성됩니다.
 
-또한, Nuxt는 다른 곳에서는 사용할 수 없는 페이지 구성 요소에 세 가지 특수 메소드를 추가 할 수도 있습니다. 그들은 _validate()_, _asyncData()_, _fetch()_입니다.
+또한, Nuxt는 다른 곳에서는 사용할 수 없는 페이지 구성 요소에 세 가지 특수 메소드를 추가 할 수도 있습니다. 그들은 _validate()_ , _asyncData()_, _fetch()_ 입니다.
 
 ```javascript
 // pages/index.vue
@@ -122,7 +122,7 @@ export default {
 
 레이아웃 컴퍼넌트는 어플리케이션의 구조적 측면(체계)을 강화합니다. 모든 페이지에 있는 공통 컴퍼넌트가 여기에 올려지게(found on) 됩니다 (기본 메뉴, 보조 메뉴, 머리글, 바닥 글 등). 그것들은 _/layouts_ 디렉토리에 있습니다.
 
-당신이 생각하는데로(creative) 이 공간을 꾸밀 수 있고, 그리고 그 꾸밈의 도구는 Vue.js의 컴퍼넌트 입니다. 레이아웃 매인 컨텐츠 구역에 _\<nuxt/>_를 추가하나는 것을 잊지 마세요.
+당신이 생각하는데로(creative) 이 공간을 꾸밀 수 있고, 그리고 그 꾸밈의 도구는 Vue.js의 컴퍼넌트 입니다. 레이아웃 매인 컨텐츠 구역에 _\<nuxt/>_ 를 추가하나는 것을 잊지 마세요.
 
 ```html
 <template>
@@ -132,8 +132,7 @@ export default {
 </template>
 ```
 
-다양한 시나리오에 대응하는 많은 사용자 유형에 맞는 _누가 무엇을 볼지_에 대한 기능을 담은 완벽한 레이아웃 컴퍼넌트를 구축하기 위해 _라우트-미들웨어_와 _데이터-상태 저장소_를 구성하세요(Incorporate). 커스텀 유져 인터페이스를 사용하는 것보다 더 많은 것을 얻을 수 있습니다. (오역주의)
-Incorporate  _route-middleware_  and  _store data-state_  with the layout component to build perfect  _who-sees-what_  features for any number of user-types with varied scenarios. You can achieve a bit more than just with a custom user interface.
+다양한 시나리오에 대응하는 많은 사용자 유형에 맞는 _누가 무엇을 볼지(who-sees-what)_ 에 대한 기능을 담은 완벽한 레이아웃 컴퍼넌트를 구축하기 위해 _라우트-미들웨어_ 와 _데이터-상태 저장소_ 를 구성하세요(Incorporate). 커스텀 유져 인터페이스를 사용하는 것보다 더 많은 것을 얻을 수 있습니다. (오역주의)
 
 #### **3. Vue.js components (/components)**
 
@@ -141,7 +140,7 @@ Incorporate  _route-middleware_  and  _store data-state_  with the layout compon
 
 하지만 비즈니스 로직을 구조화하고 구성 할 수 있습니다. 또한 **페이지** 및 **레이아웃** 컴퍼넌트에서 큰 마크업 구조(HTML)을 숨깁니다. 이렇게 하면 코드베이스를보다 쉽게 ​​관리 할 수 ​​있습니다.
 
-이제 자세히 살펴보십시오 - Nuxt 라이프 사이클 다이어그램의 부분 폴더 구조가 이해 되시나요( can you see)?
+이제 자세히 살펴보십시오 - Nuxt 라이프 사이클 다이어그램의 부분 폴더 구조가 이해 되시나요(can you see)?
 **힌트:** 저장소 (nuxtServerInit), 라우트 미들웨어 및 페이지 컴퍼넌트들 (validate, asyncData 및 fetch 메소드)
 
 ![Nuxt.js Lifecycle Hooks](https://pbs.twimg.com/media/DeDKSyuUwAARbq-.jpg)<blockquote class="twitter-tweet" data-lang="ko"><p lang="en" dir="ltr">Understanding Nuxt.js Lifecycle Hooks... <a href="https://twitter.com/nuxt_js?ref_src=twsrc%5Etfw">@nuxt_js</a> <a href="https://twitter.com/vuejs?ref_src=twsrc%5Etfw">@vuejs</a> ...had ton of fun creating this diagram. ✍️ <a href="https://t.co/nDu1dXRfEF">pic.twitter.com/nDu1dXRfEF</a></p>&mdash; krutiepatel (@KrutiePatel) <a href="https://twitter.com/KrutiePatel/status/1000022559184764930?ref_src=twsrc%5Etfw">2018년 5월 25일</a></blockquote>
@@ -152,7 +151,7 @@ Incorporate  _route-middleware_  and  _store data-state_  with the layout compon
 
 JavaScript 파일, 커스텀 글꼴 및 CSS 파일과 같은 Asset은 파일 형식에 따라 특정 로더(css-loader, file-loader, url-loader etc)를 사용하여 Webpack에서 처리됩니다. 예를 들어 CSS를 _.scss_ 또는 _.less_ 문법으로 작성하면 Webpack은 특정 로더를 사용하여 이러한 파일을 처리하고 브라우저에서 사용할 수있는 컴파일 된 _.css_ 파일을 만들어냅니다.
 
-_nuxt.config.js_의 값을 조정하며 Webpack에서 빌드 프로세스의 일부로 assets 폴더의 이미지를 축소 및 최적화하도록 설정 할 수도 있습니다. Webpack이 파일을 처리 한 후 처리 된 항목에 해시 코드를 첨부(_예 : index.4258e3668a44556dd767.js_)하면 동적 자산의 장기간 캐싱과 캐시 무효화에 도움이됩니다.
+_nuxt.config.js_ 의 값을 조정하며 Webpack에서 빌드 프로세스의 일부로 assets 폴더의 이미지를 축소 및 최적화하도록 설정 할 수도 있습니다. Webpack이 파일을 처리 한 후 처리 된 항목에 해시 코드를 첨부(_예 : index.4258e3668a44556dd767.js_)하면 동적 자산의 장기간 캐싱과 캐시 무효화에 도움이됩니다.
 
 #### **Static assets (/static)**
 
@@ -200,7 +199,7 @@ serverMiddleware 및 모듈 용으로 미리 채워진 빈 폴더가 없다는 �
 
 원하는 기능을 다 만들었다면, _npm run build_ 를 사용하여 어플리케이션을 빌드할 수 있습니다. Nuxt가  어플리케이션을 패키지화합니다.
 
-아래 다이어그램에 표시된 것처럼 _index.js_는 _app.js_를 가져 오는 메인 진입 점입니다.
+아래 다이어그램에 표시된 것처럼 _index.js_ 는 _app.js_ 를 가져 오는 메인 진입 점입니다.
 
 ![IMAGE;](https://cdn-images-1.medium.com/max/2000/1*5K1HLp5zxlKfwlM7X2BdZw.jpeg)
 
