@@ -4,11 +4,11 @@ title: About
 permalink: /about/
 ---
 
-# nGenius
+# nGenius (Sukmin Lim)
 
 * I am using
-  - javascript (also using jQuery)
-  - python
-  - chrome extension
-  - node.js
+  * javascript & TypeScript
+  * react.js (with next.js)
+  * node.js
 * I am living in Seoul, South Korea
+* [Resume(linkedin)](https://linkedin.com/in/imsukmin/)
